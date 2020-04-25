@@ -8,10 +8,7 @@
 
 # 화면
 
-
-
 ![1](TableViewPractice(NoStoryBoard)/1.png)
-
 ![2](TableViewPractice(NoStoryBoard)/2.png)
 
 ### SceneDelegate.swift (no Story Board setup)
