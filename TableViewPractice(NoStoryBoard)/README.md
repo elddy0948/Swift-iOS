@@ -8,9 +8,9 @@
 
 # 화면
 
-<img src="/Users/kimhojoon/Desktop/Simulator Screen Shot - iPhone 11 - 2020-04-25 at 20.49.32.png" alt="Simulator Screen Shot - iPhone 11 - 2020-04-25 at 20.49.32" style="zoom: 33%;" />
+<img src="/Users/kimhojoon/Desktop/1.png" style="zoom:33%;" />![2](/Users/kimhojoon/Desktop/2.png)
 
-<img src="/Users/kimhojoon/Desktop/Simulator Screen Shot - iPhone 11 - 2020-04-25 at 20.49.37.png" alt="Simulator Screen Shot - iPhone 11 - 2020-04-25 at 20.49.37" style="zoom:33%;" />
+![2](/Users/kimhojoon/Desktop/2.png)
 
 ### SceneDelegate.swift (no Story Board setup)
 
