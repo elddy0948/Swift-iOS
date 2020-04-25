@@ -10,9 +10,9 @@
 
 
 
-<img src="/Users/kimhojoon/Swift-iOS/TableViewPractice(NoStoryBoard)/1.png" alt="1" style="zoom:33%;" />
+![1](TableViewPractice(NoStoryBoard)/1.png)
 
-
+![2](TableViewPractice(NoStoryBoard)/2.png)
 
 ### SceneDelegate.swift (no Story Board setup)
 
