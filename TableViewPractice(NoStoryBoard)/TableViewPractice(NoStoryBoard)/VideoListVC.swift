@@ -27,7 +27,6 @@ class VideoListVC: UIViewController, WKUIDelegate {
         super.viewDidLoad()
         configureTableView()
         loadVideos()
-        
     }
     
     func configureTableView() {
@@ -48,8 +47,6 @@ class VideoListVC: UIViewController, WKUIDelegate {
     }
     
     func loadVideos() {
-//        https://img.youtube.com/vi/[videoKey]/0.jpg
-//        https://www.youtube.com/embed/[videoKey]
         let video1 = Video()
         video1.key = "QX5n1x8VsiU"
         video1.title = "Duggy - 너와 하늘"
