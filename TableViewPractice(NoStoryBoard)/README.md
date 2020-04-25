@@ -8,9 +8,11 @@
 
 # 화면
 
-<img src="/Users/kimhojoon/Desktop/1.png" style="zoom:33%;" />![2](/Users/kimhojoon/Desktop/2.png)
 
-![2](/Users/kimhojoon/Desktop/2.png)
+
+<img src="/Users/kimhojoon/Swift-iOS/TableViewPractice(NoStoryBoard)/1.png" alt="1" style="zoom:33%;" />
+
+
 
 ### SceneDelegate.swift (no Story Board setup)
 
