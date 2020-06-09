@@ -1,16 +1,10 @@
 #  <#Title#>
 
-VStack
-
-![VStack](https://user-images.githubusercontent.com/40102795/84109163-032a3680-aa5d-11ea-90aa-26ae059a5cbf.png)
-
-
 HStack
+![HStack](https://user-images.githubusercontent.com/40102795/84114082-b0ee1300-aa66-11ea-9f74-9204e49eb755.png)
 
-![HStack](https://user-images.githubusercontent.com/40102795/84109190-10dfbc00-aa5d-11ea-901c-2d31eaf3775e.png)
-
+VStack
+![VStack](https://user-images.githubusercontent.com/40102795/84114096-b77c8a80-aa66-11ea-8a4f-f319f8160b28.png)
 
 ZStack
-
-![ZStack](https://user-images.githubusercontent.com/40102795/84109208-1b9a5100-aa5d-11ea-9cef-1f84722503c7.png)
-
+![ZStack](https://user-images.githubusercontent.com/40102795/84114105-bb101180-aa66-11ea-9b00-7f071718acc7.png)
