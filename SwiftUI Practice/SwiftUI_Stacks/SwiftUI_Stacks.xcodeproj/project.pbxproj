@@ -13,9 +13,9 @@
 		B4A6E732248F4F60004754AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A6E731248F4F60004754AF /* Assets.xcassets */; };
 		B4A6E735248F4F60004754AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A6E734248F4F60004754AF /* Preview Assets.xcassets */; };
 		B4A6E738248F4F60004754AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A6E736248F4F60004754AF /* LaunchScreen.storyboard */; };
-		B4A6E740248F53C4004754AF /* HStack.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A6E73F248F53C4004754AF /* HStack.png */; };
-		B4A6E742248F53CE004754AF /* VStack.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A6E741248F53CE004754AF /* VStack.png */; };
-		B4A6E744248F53DA004754AF /* ZStack.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A6E743248F53DA004754AF /* ZStack.png */; };
+		B4A97056248F648F006A5165 /* VStack.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A97054248F648F006A5165 /* VStack.png */; };
+		B4A97057248F648F006A5165 /* ZStack.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A97055248F648F006A5165 /* ZStack.png */; };
+		B4A97059248F6497006A5165 /* HStack.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A97058248F6497006A5165 /* HStack.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,10 +27,10 @@
 		B4A6E734248F4F60004754AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4A6E737248F4F60004754AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4A6E739248F4F60004754AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4A6E73F248F53C4004754AF /* HStack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HStack.png; sourceTree = "<group>"; };
-		B4A6E741248F53CE004754AF /* VStack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VStack.png; sourceTree = "<group>"; };
-		B4A6E743248F53DA004754AF /* ZStack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZStack.png; sourceTree = "<group>"; };
 		B4A6E745248F542E004754AF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B4A97054248F648F006A5165 /* VStack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VStack.png; sourceTree = "<group>"; };
+		B4A97055248F648F006A5165 /* ZStack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZStack.png; sourceTree = "<group>"; };
+		B4A97058248F6497006A5165 /* HStack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HStack.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +69,10 @@
 				B4A6E72F248F4F5F004754AF /* ContentView.swift */,
 				B4A6E731248F4F60004754AF /* Assets.xcassets */,
 				B4A6E736248F4F60004754AF /* LaunchScreen.storyboard */,
+				B4A97058248F6497006A5165 /* HStack.png */,
+				B4A97054248F648F006A5165 /* VStack.png */,
+				B4A97055248F648F006A5165 /* ZStack.png */,
 				B4A6E739248F4F60004754AF /* Info.plist */,
-				B4A6E73F248F53C4004754AF /* HStack.png */,
-				B4A6E743248F53DA004754AF /* ZStack.png */,
-				B4A6E741248F53CE004754AF /* VStack.png */,
 				B4A6E733248F4F60004754AF /* Preview Content */,
 			);
 			path = SwiftUI_Stacks;
@@ -144,12 +144,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4A97057248F648F006A5165 /* ZStack.png in Resources */,
+				B4A97059248F6497006A5165 /* HStack.png in Resources */,
 				B4A6E738248F4F60004754AF /* LaunchScreen.storyboard in Resources */,
-				B4A6E742248F53CE004754AF /* VStack.png in Resources */,
+				B4A97056248F648F006A5165 /* VStack.png in Resources */,
 				B4A6E735248F4F60004754AF /* Preview Assets.xcassets in Resources */,
-				B4A6E744248F53DA004754AF /* ZStack.png in Resources */,
 				B4A6E732248F4F60004754AF /* Assets.xcassets in Resources */,
-				B4A6E740248F53C4004754AF /* HStack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,8 +16,7 @@ struct ContentView: View {
                 ForEach(chelsea, id: \.self) {
                     player in Image(player)
                         .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .fixedSize(horizontal: true, vertical: true)
+                        .aspectRatio(contentMode: .fit)
                     
                 }
             }
@@ -25,8 +24,7 @@ struct ContentView: View {
                 ForEach(chelsea, id: \.self) {
                     player in Image(player)
                         .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .fixedSize(horizontal: true, vertical: true)
+                        .aspectRatio(contentMode: .fit)
                     
                 }
             }
@@ -34,8 +32,7 @@ struct ContentView: View {
               ForEach(chelsea, id: \.self) {
                     player in Image(player)
                         .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .fixedSize(horizontal: true, vertical: true)
+                        .aspectRatio(contentMode: .fit)
                     
                 }
             }
