@@ -26,6 +26,7 @@
 		B430B81B248FD9520092D336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B430B81D248FD9520092D336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B430B823248FDF4A0092D336 /* OrderCoffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrderCoffee.png; sourceTree = "<group>"; };
+		B430B825248FDFB40092D336 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +43,7 @@
 		B430B803248FD9510092D336 = {
 			isa = PBXGroup;
 			children = (
+				B430B825248FDFB40092D336 /* README.md */,
 				B430B80E248FD9510092D336 /* Making Americano */,
 				B430B80D248FD9510092D336 /* Products */,
 			);
