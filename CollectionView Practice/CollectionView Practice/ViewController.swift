@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let arr = ["Hello","Come","On"]
+    let arr = ["americano","cafelatte","espresso"]
     let reuseIdentifier = "myCell"
     
     @IBOutlet weak var myCollection: UICollectionView!
@@ -28,8 +28,10 @@ extension ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        cell.backgroundColor = .black
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PhotoCell
+        
+        cell.photoImage.image = UIImage(named: arr[indexPath.row])
+        
         return cell
     }
 }

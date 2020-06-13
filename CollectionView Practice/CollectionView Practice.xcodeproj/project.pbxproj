@@ -13,6 +13,7 @@
 		B467A60F2494B88A00A91635 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B467A60D2494B88A00A91635 /* Main.storyboard */; };
 		B467A6112494B88B00A91635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B467A6102494B88B00A91635 /* Assets.xcassets */; };
 		B467A6142494B88B00A91635 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B467A6122494B88B00A91635 /* LaunchScreen.storyboard */; };
+		B467A61D2494D3C200A91635 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B467A61C2494D3C200A91635 /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		B467A6102494B88B00A91635 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B467A6132494B88B00A91635 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B467A6152494B88B00A91635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B467A61B2494D04100A91635 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B467A61C2494D3C200A91635 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +43,7 @@
 		B467A5FB2494B88A00A91635 = {
 			isa = PBXGroup;
 			children = (
+				B467A61B2494D04100A91635 /* README.md */,
 				B467A6062494B88A00A91635 /* CollectionView Practice */,
 				B467A6052494B88A00A91635 /* Products */,
 			);
@@ -63,6 +67,7 @@
 				B467A6102494B88B00A91635 /* Assets.xcassets */,
 				B467A6122494B88B00A91635 /* LaunchScreen.storyboard */,
 				B467A6152494B88B00A91635 /* Info.plist */,
+				B467A61C2494D3C200A91635 /* PhotoCell.swift */,
 			);
 			path = "CollectionView Practice";
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B467A61D2494D3C200A91635 /* PhotoCell.swift in Sources */,
 				B467A60C2494B88A00A91635 /* ViewController.swift in Sources */,
 				B467A6082494B88A00A91635 /* AppDelegate.swift in Sources */,
 				B467A60A2494B88A00A91635 /* SceneDelegate.swift in Sources */,
