@@ -8,13 +8,18 @@
 
 import UIKit
 
-class SignInVC: UIViewController {
+class SigninVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func LoginPressed(_ sender: UIButton) {
+        print("Login Pressed!")
+    }
+    @IBAction func RegisterPressed(_ sender: UIButton) {
+        print("Register Pressed!")
+    }
 }
 

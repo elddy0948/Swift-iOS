@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B40004DD24B4C7E500ADABA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40004DC24B4C7E500ADABA3 /* AppDelegate.swift */; };
 		B40004DF24B4C7E500ADABA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40004DE24B4C7E500ADABA3 /* SceneDelegate.swift */; };
-		B40004E124B4C7E500ADABA3 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40004E024B4C7E500ADABA3 /* SignInVC.swift */; };
+		B40004E124B4C7E500ADABA3 /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40004E024B4C7E500ADABA3 /* SigninVC.swift */; };
 		B40004E424B4C7E500ADABA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40004E224B4C7E500ADABA3 /* Main.storyboard */; };
 		B40004E624B4C7E600ADABA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B40004E524B4C7E600ADABA3 /* Assets.xcassets */; };
 		B40004E924B4C7E600ADABA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40004E724B4C7E600ADABA3 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		B40004D924B4C7E500ADABA3 /* Emotion App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emotion App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40004DC24B4C7E500ADABA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B40004DE24B4C7E500ADABA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B40004E024B4C7E500ADABA3 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		B40004E024B4C7E500ADABA3 /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
 		B40004E324B4C7E500ADABA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B40004E524B4C7E600ADABA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B40004E824B4C7E600ADABA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,23 @@
 		B40004DB24B4C7E500ADABA3 /* Emotion App */ = {
 			isa = PBXGroup;
 			children = (
+				B4A2C73A24B4F4C7002AD2EC /* Controller */,
 				B40004DC24B4C7E500ADABA3 /* AppDelegate.swift */,
 				B40004DE24B4C7E500ADABA3 /* SceneDelegate.swift */,
-				B40004E024B4C7E500ADABA3 /* SignInVC.swift */,
 				B40004E224B4C7E500ADABA3 /* Main.storyboard */,
 				B40004E524B4C7E600ADABA3 /* Assets.xcassets */,
 				B40004E724B4C7E600ADABA3 /* LaunchScreen.storyboard */,
 				B40004EA24B4C7E600ADABA3 /* Info.plist */,
 			);
 			path = "Emotion App";
+			sourceTree = "<group>";
+		};
+		B4A2C73A24B4F4C7002AD2EC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B40004E024B4C7E500ADABA3 /* SigninVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B40004E124B4C7E500ADABA3 /* SignInVC.swift in Sources */,
+				B40004E124B4C7E500ADABA3 /* SigninVC.swift in Sources */,
 				B40004DD24B4C7E500ADABA3 /* AppDelegate.swift in Sources */,
 				B40004DF24B4C7E500ADABA3 /* SceneDelegate.swift in Sources */,
 			);
