@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "SignInButton.png",
+      "filename" : "login.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "SignInButton-1.png",
+      "filename" : "login-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "SignInButton-2.png",
+      "filename" : "login-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
