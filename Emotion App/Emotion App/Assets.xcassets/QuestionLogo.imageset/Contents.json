@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Logo.png",
+      "filename" : "QuestionLogo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Logo-1.png",
+      "filename" : "QuestionLogo-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Logo-2.png",
+      "filename" : "QuestionLogo-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
