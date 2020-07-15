@@ -19,6 +19,16 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setUpElements()
+    }
+    
+    func setUpElements() {
+//        Hide the error label
+        errorText.alpha = 0
+        
+        Utilities.styleTextField(emailTextField)
+        Utilities.styleTextField(passwordTextField)
+        Utilities.styleFilledButton(logInButton)
     }
     
     @IBAction func LogInTapped(_ sender: Any) {
