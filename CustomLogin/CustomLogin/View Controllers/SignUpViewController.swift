@@ -56,14 +56,27 @@ class SignUpViewController: UIViewController {
             //There is something wrong with fields
             showError(err!)
         } else {
+            //Create cleaned versions of the data
+            
+            let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
             //Create User
-            Auth.auth().createUser(withEmail: <#T##String#>, password: <#T##String#>) { (results, err) in
+            Auth.auth().createUser(withEmail: email, password: password) { (results, err) in
                 if err != nil {
                     //There was an error
                     self.showError("Error Creating User")
                 } else {
                     //UserCreated Successfully
-                    
+                    let db = Firestore.firestore()
+                    db.collection("users").addDocument(data: ["first_name": firstName, "last_name": lastName, "uid": results!.user.uid]) { (error) in
+                        if error != nil {
+                            self.showError("Error Saving User Data")
+                        }
+                    }
+                    self.transitionToHome()
                 }
             }
         }
@@ -72,6 +85,14 @@ class SignUpViewController: UIViewController {
     func showError(_ message: String) {
         errorText.text = message
         errorText.alpha = 1
+    }
+    
+    func transitionToHome() {
+        
+        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
     }
 
 }

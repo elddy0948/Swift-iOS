@@ -212,7 +212,7 @@
         <!--Home View Controller-->
         <scene sceneID="Gh7-at-7IQ">
             <objects>
-                <viewController id="xk6-0J-Bib" customClass="HomeViewController" customModule="CustomLogin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="xk6-0J-Bib" customClass="HomeViewController" customModule="CustomLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PzL-OU-D9F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
