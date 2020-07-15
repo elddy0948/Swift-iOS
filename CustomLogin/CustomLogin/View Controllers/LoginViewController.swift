@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -32,6 +33,30 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func LogInTapped(_ sender: Any) {
+        //validate textfield
+        
+        //create cleaned fields
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        //signing in user
+        Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
+            if err != nil {
+                //Couldn't sign in
+                self.errorText.text = err!.localizedDescription
+                self.errorText.alpha = 1
+            } else {
+                //로그인 성공
+                self.transitionToHome()
+            }
+        }
+    }
+    func transitionToHome() {
+        
+        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
     }
     
 }
