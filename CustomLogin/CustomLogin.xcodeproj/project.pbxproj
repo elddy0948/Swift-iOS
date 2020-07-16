@@ -67,6 +67,7 @@
 		B4B92D6224BE018B00180BE9 = {
 			isa = PBXGroup;
 			children = (
+				B49770D924C040AF00A37B97 /* .gitignore */,
 				B4B92D6D24BE018B00180BE9 /* CustomLogin */,
 				B4B92D6C24BE018B00180BE9 /* Products */,
 				CEF358936084836FFBFB8D81 /* Pods */,
@@ -94,7 +95,6 @@
 				B4B92D7924BE018E00180BE9 /* LaunchScreen.storyboard */,
 				B4B92D7C24BE018E00180BE9 /* Info.plist */,
 				B42637BE24BF6E3C0064F200 /* GoogleService-Info.plist */,
-				B49770D924C040AF00A37B97 /* .gitignore */,
 			);
 			path = CustomLogin;
 			sourceTree = "<group>";
