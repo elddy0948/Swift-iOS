@@ -44,7 +44,12 @@ class SignUpViewController: UIViewController {
     @IBAction func signupButtonPressed(_ sender: UIButton) {
         cleanedTextField()
         print("lastname : \(lastname) \n firstname : \(firstname) \n email : \(email) \n password : \(password) \n birthdate : \(birth)" )
+        transitionToHome()
     }
     
-    
+    func transitionToHome() {
+        let homeTabBarController = storyboard?.instantiateViewController(identifier: Constants.ViewController.homeTabBar)
+        view.window?.rootViewController = homeTabBarController
+        view.window?.makeKeyAndVisible()
+    }
 }
