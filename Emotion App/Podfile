@@ -7,5 +7,7 @@ target 'Emotion App' do
 
   # Pods for Emotion App
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Analytics'
 
 end

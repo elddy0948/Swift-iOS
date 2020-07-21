@@ -27,7 +27,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         Utilities.styleButton(signupButton)
     }
@@ -45,8 +45,23 @@ class SignUpViewController: UIViewController {
     }
     @IBAction func signupButtonPressed(_ sender: UIButton) {
         cleanedTextField()
+        let err = validateFields()
+        if err == nil {
+            //Create User
+            Auth.auth().createUser(withEmail: email, password: password) { (results, errors) in
+                if errors == nil {
+                    //회원가입 성공적
+                    let db = Firestore.firestore()
+                    db.collection(Constants.Firebase.userCollection).addDocument(data: [Constants.Firebase.firstName : self.firstname, Constants.Firebase.lastName : self.lastname, Constants.Firebase.uid : results!.user.uid]) { (errors) in
+                        if errors == nil {
+                            
+                        }
+                    }
+                    self.transitionToHome()
+                }
+            }
+        }
         print("lastname : \(lastname) \n firstname : \(firstname) \n email : \(email) \n password : \(password) \n birthdate : \(birth)" )
-        transitionToHome()
     }
     
     func validateFields() -> String? {

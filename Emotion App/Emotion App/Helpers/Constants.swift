@@ -19,4 +19,10 @@ class Constants {
         var soso = "Soso"
         var bad = "Bad"
     }
+    struct Firebase {
+        static var userCollection = "users"
+        static var firstName = "firstName"
+        static var lastName = "lastName"
+        static var uid = "uid"
+    }
 }
