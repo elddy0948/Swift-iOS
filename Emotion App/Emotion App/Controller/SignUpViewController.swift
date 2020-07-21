@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class SignUpViewController: UIViewController {
     @IBOutlet weak var signupButton: UIButton!
@@ -45,6 +47,17 @@ class SignUpViewController: UIViewController {
         cleanedTextField()
         print("lastname : \(lastname) \n firstname : \(firstname) \n email : \(email) \n password : \(password) \n birthdate : \(birth)" )
         transitionToHome()
+    }
+    
+    func validateFields() -> String? {
+        //모든 칸이 채워졌는지 확인.
+        if firstnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)  == "" ||
+            lastnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return "모든 칸을 채워주세요!"
+        }
+        return nil
     }
     
     func transitionToHome() {
