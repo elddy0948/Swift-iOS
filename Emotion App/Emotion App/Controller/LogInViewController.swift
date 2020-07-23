@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LogInViewController: UIViewController {
 
@@ -14,11 +15,29 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         Utilities.styleButton(loginButton)
     }
 
+    
+    func transitionToHome() {
+        let homeTabBarController = storyboard?.instantiateViewController(identifier: Constants.ViewController.homeTabBar)
+        view.window?.rootViewController = homeTabBarController
+        view.window?.makeKeyAndVisible()
+    }
+    
+    @IBAction func loginPressed(_ sender: Any) {
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        Auth.auth().signIn(withEmail: email, password: password) { (results, error) in
+            if error != nil {
+                print(error?.localizedDescription)
+            } else {
+                self.transitionToHome()
+            }
+        }
+    }
 }

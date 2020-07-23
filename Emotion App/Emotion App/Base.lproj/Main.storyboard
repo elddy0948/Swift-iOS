@@ -195,6 +195,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vd5-eA-3mC">
                                         <rect key="frame" x="0.0" y="120" width="354" height="30"/>
                                         <state key="normal" title="로그인"/>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="6pR-7c-f8U" eventType="touchUpInside" id="FGX-My-mul"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

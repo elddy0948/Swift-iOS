@@ -36,7 +36,6 @@ class SignUpViewController: UIViewController {
         firstname = firstnameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
     }
     @IBAction func birthdateChanged(_ sender: Any) {
         let dateFormatter = DateFormatter()
