@@ -67,13 +67,13 @@
 				B4BB017024D14BCC0017FB36 /* AppDelegate.swift */,
 				B4BB017224D14BCC0017FB36 /* SceneDelegate.swift */,
 				B4BB017424D14BCC0017FB36 /* ViewController.swift */,
+				B4BB018824D151A70017FB36 /* TableViewDataSources.swift */,
 				B4BB018424D14C730017FB36 /* ScrollTableViewController.swift */,
 				B4BB018624D150940017FB36 /* MyTableViewCell.swift */,
 				B4BB017624D14BCC0017FB36 /* Main.storyboard */,
 				B4BB017924D14BCE0017FB36 /* Assets.xcassets */,
 				B4BB017B24D14BCE0017FB36 /* LaunchScreen.storyboard */,
 				B4BB017E24D14BCE0017FB36 /* Info.plist */,
-				B4BB018824D151A70017FB36 /* TableViewDataSources.swift */,
 			);
 			path = "TableView inside ScrollView";
 			sourceTree = "<group>";

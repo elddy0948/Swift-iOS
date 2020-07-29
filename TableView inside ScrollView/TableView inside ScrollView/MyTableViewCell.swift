@@ -11,9 +11,7 @@ import UIKit
 class MyTableViewCell: UITableViewCell {
 
     @IBOutlet weak var myImageView: UIImageView!
-    
     @IBOutlet weak var myLabel: UILabel!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +22,4 @@ class MyTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
-
 }
