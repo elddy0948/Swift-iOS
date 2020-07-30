@@ -1,8 +1,8 @@
 #  SearchBar Practice
 
 
+![1](https://user-images.githubusercontent.com/40102795/88933804-d525dd80-d2ba-11ea-960b-182afd46ac81.gif)
 
-![1](https://user-images.githubusercontent.com/40102795/88933534-7fe9cc00-d2ba-11ea-8f1a-0b8eaed81756.gif)
 
+![2](https://user-images.githubusercontent.com/40102795/88933815-d7883780-d2ba-11ea-8269-9b1ad8293222.gif)
 
-![2](https://user-images.githubusercontent.com/40102795/88933541-82e4bc80-d2ba-11ea-8bdf-b53593a32456.gif)
