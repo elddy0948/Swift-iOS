@@ -19,7 +19,7 @@
                                 <rect key="frame" x="10" y="54" width="394" height="246"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ceB-VP-FlG">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="216"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="216"/>
                                         <connections>
                                             <action selector="dateChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="obD-wt-f5v"/>
                                         </connections>

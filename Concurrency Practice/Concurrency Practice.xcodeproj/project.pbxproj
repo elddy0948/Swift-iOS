@@ -13,6 +13,7 @@
 		B4D00C5A24D98467004FCEC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4D00C5824D98467004FCEC1 /* Main.storyboard */; };
 		B4D00C5C24D98469004FCEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4D00C5B24D98469004FCEC1 /* Assets.xcassets */; };
 		B4D00C5F24D98469004FCEC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4D00C5D24D98469004FCEC1 /* LaunchScreen.storyboard */; };
+		B4D00C6724D98AE9004FCEC1 /* CalculatePrimeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D00C6624D98AE9004FCEC1 /* CalculatePrimeOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		B4D00C5B24D98469004FCEC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4D00C5E24D98469004FCEC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4D00C6024D98469004FCEC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4D00C6624D98AE9004FCEC1 /* CalculatePrimeOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePrimeOperation.swift; sourceTree = "<group>"; };
+		B4D00C6824D98B90004FCEC1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +43,7 @@
 		B4D00C4624D98467004FCEC1 = {
 			isa = PBXGroup;
 			children = (
+				B4D00C6824D98B90004FCEC1 /* README.md */,
 				B4D00C5124D98467004FCEC1 /* Concurrency Practice */,
 				B4D00C5024D98467004FCEC1 /* Products */,
 			);
@@ -59,6 +63,7 @@
 				B4D00C5224D98467004FCEC1 /* AppDelegate.swift */,
 				B4D00C5424D98467004FCEC1 /* SceneDelegate.swift */,
 				B4D00C5624D98467004FCEC1 /* ViewController.swift */,
+				B4D00C6624D98AE9004FCEC1 /* CalculatePrimeOperation.swift */,
 				B4D00C5824D98467004FCEC1 /* Main.storyboard */,
 				B4D00C5B24D98469004FCEC1 /* Assets.xcassets */,
 				B4D00C5D24D98469004FCEC1 /* LaunchScreen.storyboard */,
@@ -138,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4D00C6724D98AE9004FCEC1 /* CalculatePrimeOperation.swift in Sources */,
 				B4D00C5724D98467004FCEC1 /* ViewController.swift in Sources */,
 				B4D00C5324D98467004FCEC1 /* AppDelegate.swift in Sources */,
 				B4D00C5524D98467004FCEC1 /* SceneDelegate.swift in Sources */,
