@@ -17,6 +17,8 @@
 		B41A6C1B250375DD004CF6D6 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41A6C1A250375DD004CF6D6 /* Book.swift */; };
 		B41A6C1D25037F10004CF6D6 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41A6C1C25037F10004CF6D6 /* Library.swift */; };
 		B4208EC6250416DF00D6F2FD /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4208EC5250416DF00D6F2FD /* BookCell.swift */; };
+		B4921A092505256F0056C3AD /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4921A082505256F0056C3AD /* NewBookViewController.swift */; };
+		B4921A0B250539870056C3AD /* LibraryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4921A0A250539870056C3AD /* LibraryHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		B41A6C1A250375DD004CF6D6 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		B41A6C1C25037F10004CF6D6 /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		B4208EC5250416DF00D6F2FD /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		B4921A082505256F0056C3AD /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookViewController.swift; sourceTree = "<group>"; };
+		B4921A0A250539870056C3AD /* LibraryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +72,11 @@
 				B41A6C08250372B3004CF6D6 /* SceneDelegate.swift */,
 				B41A6C0A250372B3004CF6D6 /* LibraryViewController.swift */,
 				B41482BB2503B64C00BA2C97 /* DetailViewController.swift */,
+				B4921A082505256F0056C3AD /* NewBookViewController.swift */,
 				B41A6C1C25037F10004CF6D6 /* Library.swift */,
 				B41A6C1A250375DD004CF6D6 /* Book.swift */,
 				B41A6C0C250372B3004CF6D6 /* Main.storyboard */,
+				B4921A0A250539870056C3AD /* LibraryHeaderView.xib */,
 				B41A6C0F250372B5004CF6D6 /* Assets.xcassets */,
 				B41A6C11250372B5004CF6D6 /* LaunchScreen.storyboard */,
 				B41A6C14250372B5004CF6D6 /* Info.plist */,
@@ -140,6 +146,7 @@
 				B41A6C13250372B5004CF6D6 /* LaunchScreen.storyboard in Resources */,
 				B41A6C10250372B5004CF6D6 /* Assets.xcassets in Resources */,
 				B41A6C0E250372B3004CF6D6 /* Main.storyboard in Resources */,
+				B4921A0B250539870056C3AD /* LibraryHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +159,7 @@
 			files = (
 				B41A6C1B250375DD004CF6D6 /* Book.swift in Sources */,
 				B41A6C0B250372B3004CF6D6 /* LibraryViewController.swift in Sources */,
+				B4921A092505256F0056C3AD /* NewBookViewController.swift in Sources */,
 				B41A6C1D25037F10004CF6D6 /* Library.swift in Sources */,
 				B4208EC6250416DF00D6F2FD /* BookCell.swift in Sources */,
 				B41482BC2503B64C00BA2C97 /* DetailViewController.swift in Sources */,
