@@ -12,7 +12,7 @@ class LibraryViewController: UITableViewController {
 
     @IBSegueAction func showDetailView(_ coder: NSCoder) -> DetailViewController? {
         guard let indexPath = tableView.indexPathForSelectedRow else {fatalError("Nothing selected")}
-        let book = Library.books[indexPath.row]
+        let book = Library.books[indexPath.row - 1]
         return DetailViewController(coder: coder, book: book)
     }
     override func viewDidLoad() {
@@ -27,13 +27,19 @@ class LibraryViewController: UITableViewController {
     
     // MARK:- DataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Library.books.count
+        return Library.books.count + 1
+        // +1을 한 이유는 Add New Book Cell이 하나 추가 되어서이다.
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath == IndexPath(row: 0, section: 0) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NewBookCell", for: indexPath)
+            return cell
+        }
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(BookCell.self)", for: indexPath) as? BookCell else {fatalError("Could not create Book Cell")}
         
-        let book = Library.books[indexPath.row]
+        let book = Library.books[indexPath.row - 1]
         cell.titleLabel?.text = book.title
         cell.authorLabel.text = book.author
         cell.bookThumbnail?.image = book.image
