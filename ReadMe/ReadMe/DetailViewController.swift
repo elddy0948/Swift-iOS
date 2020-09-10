@@ -30,7 +30,7 @@ class DetailViewController: UITableViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        bookImageView?.image = book.image
+        bookImageView?.image = book.image ?? LibrarySymbol.letterSquare(letter: book.title.first).image
         bookImageView?.layer.cornerRadius = 16
         titleLabel.text = book.title
         authorLabel.text = book.author
