@@ -11,8 +11,13 @@ import UIKit
 //Section안에 Group이 있고, Group안에 Item이 있다.
 
 class ViewController: UIViewController {
+    enum Section {
+        case main
+    }
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var dataSource: UICollectionViewDiffableDataSource<Section, Int>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +26,8 @@ class ViewController: UIViewController {
         //CollectionView Layout 설정
         collectionView.collectionViewLayout = collectionLayoutConfigure()
         
+        //DataSouce 호출
+        configureDataSource()
     }
     
     func collectionLayoutConfigure() -> UICollectionViewLayout{
@@ -41,6 +48,19 @@ class ViewController: UIViewController {
         
         return UICollectionViewCompositionalLayout(section: section)
     }
-
+    
+    func configureDataSource() {
+        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { (collectionView, indexPath, number) -> UICollectionViewCell? in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NumberCell.reuseIdentifier, for: indexPath) as? NumberCell else { fatalError("Cannot make New Cell") }
+            cell.cellLabel.text = number.description
+            return cell
+        })
+        
+        var initialSnapShot = NSDiffableDataSourceSnapshot<Section, Int>()
+        initialSnapShot.appendSections([.main])
+        initialSnapShot.appendItems(Array(1...100))
+        
+        dataSource.apply(initialSnapShot, animatingDifferences: false)
+    }
 }
 
