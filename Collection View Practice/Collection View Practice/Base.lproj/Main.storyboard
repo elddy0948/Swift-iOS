@@ -34,16 +34,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oT5-Bh-ASt">
-                                                    <rect key="frame" x="8" y="11.5" width="398" height="21"/>
+                                                    <rect key="frame" x="186" y="11.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="oT5-Bh-ASt" secondAttribute="trailing" constant="8" id="Iuv-2g-ZdZ"/>
-                                                <constraint firstItem="oT5-Bh-ASt" firstAttribute="leading" secondItem="5sI-ss-Ade" secondAttribute="leading" constant="8" id="RhY-Na-eBV"/>
-                                                <constraint firstItem="oT5-Bh-ASt" firstAttribute="centerY" secondItem="5sI-ss-Ade" secondAttribute="centerY" id="e2C-AA-73a"/>
+                                                <constraint firstItem="oT5-Bh-ASt" firstAttribute="centerX" secondItem="5sI-ss-Ade" secondAttribute="centerX" id="2U2-63-Nbc"/>
+                                                <constraint firstItem="oT5-Bh-ASt" firstAttribute="centerY" secondItem="5sI-ss-Ade" secondAttribute="centerY" id="ucW-p9-nXh"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="44"/>
