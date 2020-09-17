@@ -9,5 +9,7 @@
 import UIKit
 
 class ImageCell: UICollectionViewCell {
+    static let reuseIdentifier = String(describing: ImageCell.self)
     
+    @IBOutlet weak var imageCell: UIImageView!
 }

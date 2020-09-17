@@ -39,7 +39,24 @@
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hj2-GF-0Jc">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PLv-DG-Gyg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="PLv-DG-Gyg" secondAttribute="height" multiplier="1:1" id="6Wz-vb-pKg"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="PLv-DG-Gyg" secondAttribute="trailing" id="1kU-gC-cRs"/>
+                                                <constraint firstItem="PLv-DG-Gyg" firstAttribute="top" secondItem="hj2-GF-0Jc" secondAttribute="top" id="R1a-HC-mOC"/>
+                                                <constraint firstItem="PLv-DG-Gyg" firstAttribute="leading" secondItem="hj2-GF-0Jc" secondAttribute="leading" id="WYL-zX-ySR"/>
+                                                <constraint firstAttribute="bottom" secondItem="PLv-DG-Gyg" secondAttribute="bottom" id="syz-M8-ySH"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageCell" destination="PLv-DG-Gyg" id="z7e-Ie-B8Y"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -57,6 +74,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="rwZ-Mi-SGc"/>
+                    <connections>
+                        <outlet property="collectionView" destination="2eR-ge-oHg" id="Dv1-x3-Gmd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
