@@ -15,15 +15,30 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<Section, Int>!
-    var pickedImage: [UIImage]?
+    
+    //<Section Type, Item Type>
+    var dataSource: UICollectionViewDiffableDataSource<Section, UIImage>!
+    var pickedImage: [UIImage] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("Will Appear")
         collectionView.collectionViewLayout = collectionLayoutConfigure()
+        configureDataSource()
+        print(pickedImage)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "show" {
+            let viewController: UploadPhotoVC = segue.destination as! UploadPhotoVC
+            viewController.delegate = self
+            print("Goto upload photo vc")
+        }
     }
 
     
@@ -35,7 +50,7 @@ class ViewController: UIViewController {
         
         //group size
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(0.2))
-        let group = NSCollectionLayoutGroup(layoutSize: groupSize)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         //section size
         let section = NSCollectionLayoutSection(group: group)
@@ -46,14 +61,20 @@ class ViewController: UIViewController {
     func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { (collectionView, indexPath, number) -> UICollectionViewCell? in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.reuseIdentifier, for: indexPath) as? ImageCell else {fatalError("Can't make Cell")}
-//            cell.imageCell.image = self.pickedImage?[indexPath.row]
+            cell.imageCell.image = self.pickedImage[indexPath.row]
             return cell
         })
-        var initialSnapShot = NSDiffableDataSourceSnapshot<Section, Int>()
+        
+        var initialSnapShot = NSDiffableDataSourceSnapshot<Section, UIImage>()
         initialSnapShot.appendSections([.main])
-        initialSnapShot.appendItems(Array(1...100))
+        initialSnapShot.appendItems(pickedImage)
         
         dataSource.apply(initialSnapShot, animatingDifferences: false)
     }
 }
 
+extension ViewController: SendDataDelegate {
+    func sendData(data: UIImage) {
+        pickedImage.append(data)
+    }
+}

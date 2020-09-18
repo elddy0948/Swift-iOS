@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol SendDataDelegate {
+    func sendData(data: UIImage)
+}
+
 class UploadPhotoVC: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
     let imagePicker = UIImagePickerController()
     var pickedImage: UIImage?
+    var delegate: SendDataDelegate?
     
 
     override func viewDidLoad() {
@@ -21,11 +26,9 @@ class UploadPhotoVC: UIViewController {
         
         //imagePicker의 delegate 지정
         imagePicker.delegate = self
-
     }
 
     @IBAction func buttonPressed(_ sender: UIButton) {
-        
         
         print("Pressed Button!")
         // 라이브러리에서 선택 vs 카메라에서 선택
@@ -47,6 +50,17 @@ class UploadPhotoVC: UIViewController {
         
         present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func uploadPressed(_ sender: UIButton) {
+        if let image = pickedImage {
+            delegate?.sendData(data: image)
+            print("Send Imgae!!")
+        } else {
+            print("Can't Send the image")
+        }
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension UploadPhotoVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -58,7 +72,6 @@ extension UploadPhotoVC: UIImagePickerControllerDelegate, UINavigationController
         
         pickedImage = pickImage
         imageView.image = pickedImage
-        
         self.dismiss(animated: true, completion: nil)
     }
     
