@@ -16,6 +16,7 @@
 		B44BAC14251768E900DC29C6 /* EmojiDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44BAC13251768E900DC29C6 /* EmojiDetailController.swift */; };
 		B44BAC172517698000DC29C6 /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44BAC162517698000DC29C6 /* EmojiCell.swift */; };
 		B44BAC1A25176A0C00DC29C6 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44BAC1925176A0C00DC29C6 /* Emoji.swift */; };
+		B44BAC1D251789B000DC29C6 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44BAC1C251789B000DC29C6 /* DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B44BAC13251768E900DC29C6 /* EmojiDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDetailController.swift; sourceTree = "<group>"; };
 		B44BAC162517698000DC29C6 /* EmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
 		B44BAC1925176A0C00DC29C6 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		B44BAC1C251789B000DC29C6 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				B44BAC13251768E900DC29C6 /* EmojiDetailController.swift */,
 				B44BAC162517698000DC29C6 /* EmojiCell.swift */,
 				B44BAC1925176A0C00DC29C6 /* Emoji.swift */,
+				B44BAC1C251789B000DC29C6 /* DataSource.swift */,
 			);
 			path = "Collection View Old School";
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B44BAC1D251789B000DC29C6 /* DataSource.swift in Sources */,
 				B44BAC1A25176A0C00DC29C6 /* Emoji.swift in Sources */,
 				B44BAC032517689300DC29C6 /* ViewController.swift in Sources */,
 				B44BAC14251768E900DC29C6 /* EmojiDetailController.swift in Sources */,

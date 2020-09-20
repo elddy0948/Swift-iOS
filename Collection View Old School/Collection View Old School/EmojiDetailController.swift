@@ -27,5 +27,4 @@ class EmojiDetailController: UIViewController {
         textLabel.text = emoji
         
     }
-    
 }
