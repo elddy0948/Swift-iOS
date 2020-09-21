@@ -17,6 +17,7 @@
 		B44BAC172517698000DC29C6 /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44BAC162517698000DC29C6 /* EmojiCell.swift */; };
 		B44BAC1A25176A0C00DC29C6 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44BAC1925176A0C00DC29C6 /* Emoji.swift */; };
 		B44BAC1D251789B000DC29C6 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44BAC1C251789B000DC29C6 /* DataSource.swift */; };
+		B4986D7D2518DD490035BC33 /* EmojiCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4986D7C2518DD490035BC33 /* EmojiCollectionViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B44BAC162517698000DC29C6 /* EmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
 		B44BAC1925176A0C00DC29C6 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		B44BAC1C251789B000DC29C6 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		B4986D7C2518DD490035BC33 /* EmojiCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,15 +68,16 @@
 			children = (
 				B44BABFE2517689300DC29C6 /* AppDelegate.swift */,
 				B44BAC002517689300DC29C6 /* SceneDelegate.swift */,
+				B44BAC1925176A0C00DC29C6 /* Emoji.swift */,
+				B44BAC1C251789B000DC29C6 /* DataSource.swift */,
+				B44BAC13251768E900DC29C6 /* EmojiDetailController.swift */,
 				B44BAC022517689300DC29C6 /* ViewController.swift */,
+				B44BAC162517698000DC29C6 /* EmojiCell.swift */,
+				B4986D7C2518DD490035BC33 /* EmojiCollectionViewDelegate.swift */,
 				B44BAC042517689300DC29C6 /* Main.storyboard */,
 				B44BAC072517689400DC29C6 /* Assets.xcassets */,
 				B44BAC092517689400DC29C6 /* LaunchScreen.storyboard */,
 				B44BAC0C2517689400DC29C6 /* Info.plist */,
-				B44BAC13251768E900DC29C6 /* EmojiDetailController.swift */,
-				B44BAC162517698000DC29C6 /* EmojiCell.swift */,
-				B44BAC1925176A0C00DC29C6 /* Emoji.swift */,
-				B44BAC1C251789B000DC29C6 /* DataSource.swift */,
 			);
 			path = "Collection View Old School";
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				B44BAC14251768E900DC29C6 /* EmojiDetailController.swift in Sources */,
 				B44BAC172517698000DC29C6 /* EmojiCell.swift in Sources */,
 				B44BABFF2517689300DC29C6 /* AppDelegate.swift in Sources */,
+				B4986D7D2518DD490035BC33 /* EmojiCollectionViewDelegate.swift in Sources */,
 				B44BAC012517689300DC29C6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
