@@ -33,5 +33,16 @@ class ViewController: UIViewController {
         
         emojiDetailController.emoji = emoji
     }
+    @IBAction func addEmoji(_ sender: Any) {
+        
+        //Data Source를 먼저 업데이트 해주고 Collection View를 수정해준다.
+        let (category, randomEmoji) = Emoji.randomEmoji()
+        dataSource.addEmoji(randomEmoji, to: category)
+        
+        let emojiCount = collectionView.numberOfItems(inSection: 0)
+        let insertedIndex = IndexPath(item: emojiCount, section: 0)
+        // CollectionView.reloadData를 사용해도 좋지만 insertItems를 활용해준다.
+        collectionView.insertItems(at: [insertedIndex])
+    }
 }
 

@@ -78,7 +78,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FQY-RO-HJd"/>
+                    <navigationItem key="navigationItem" id="FQY-RO-HJd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZBz-I4-5yY">
+                            <connections>
+                                <action selector="addEmoji:" destination="BYZ-38-t0r" id="lgF-Ak-tZz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="odE-h3-Aty" id="Iek-cp-9eV"/>
                     </connections>

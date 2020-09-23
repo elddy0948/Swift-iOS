@@ -37,3 +37,11 @@ class DataSource: NSObject, UICollectionViewDataSource {
         return emojiHeader
     }
 }
+
+extension DataSource {
+    func addEmoji(_ emoji: String, to category: Emoji.Category) {
+        guard var emojiData = self.emoji.data[category] else {return}
+        emojiData.append(emoji)
+        self.emoji.data.updateValue(emojiData, forKey: category)
+    }
+}
