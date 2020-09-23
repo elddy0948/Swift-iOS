@@ -19,7 +19,30 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         collectionView.dataSource = dataSource
         collectionView.delegate = delegate
+        
+        navigationItem.leftBarButtonItem = editButtonItem
     }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        collectionView.indexPathsForVisibleItems.forEach {
+            guard let emojiCell = collectionView.cellForItem(at: $0) as? EmojiCell else {return}
+            emojiCell.isEditing = editing
+        }
+        if !isEditing {
+            collectionView.indexPathsForVisibleItems.compactMap({$0}).forEach {
+                collectionView.deselectItem(at: $0, animated: true)
+            }
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if isEditing && identifier == "showEmojiDetail" {
+            return false
+        }
+        return true
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "showEmojiDetail",
