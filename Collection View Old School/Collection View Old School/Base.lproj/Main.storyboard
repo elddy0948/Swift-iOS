@@ -79,14 +79,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="FQY-RO-HJd">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZBz-I4-5yY">
-                            <connections>
-                                <action selector="addEmoji:" destination="BYZ-38-t0r" id="lgF-Ak-tZz"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="ZBz-I4-5yY">
+                                <connections>
+                                    <action selector="addEmoji:" destination="BYZ-38-t0r" id="lgF-Ak-tZz"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem enabled="NO" systemItem="trash" id="eq9-eZ-zfl">
+                                <connections>
+                                    <action selector="deleteEmoji:" destination="BYZ-38-t0r" id="Xvb-9s-8om"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="ZBz-I4-5yY" id="BId-e1-gUF"/>
                         <outlet property="collectionView" destination="odE-h3-Aty" id="Iek-cp-9eV"/>
+                        <outlet property="deleteButton" destination="eq9-eZ-zfl" id="cE8-2X-FLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
