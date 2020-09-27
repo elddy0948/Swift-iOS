@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="str-6e-8eH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmojiLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tPh-V3-di5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AKj-tL-dq0">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiCell" id="n0d-eH-XGA" customClass="EmojiCell" customModule="EmojiLibrary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="di4-kK-qQK">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xkb-uO-2o1">
+                                                    <rect key="frame" x="12" y="12" width="26" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                            <constraints>
+                                                <constraint firstItem="Xkb-uO-2o1" firstAttribute="centerX" secondItem="di4-kK-qQK" secondAttribute="centerX" id="cf3-tC-Mxm"/>
+                                                <constraint firstItem="Xkb-uO-2o1" firstAttribute="centerY" secondItem="di4-kK-qQK" secondAttribute="centerY" id="gAC-fw-vRU"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="50" height="50"/>
+                                        <connections>
+                                            <outlet property="emojiLabel" destination="Xkb-uO-2o1" id="Ao6-Cg-3WR"/>
+                                            <segue destination="h6V-1T-Ibb" kind="show" identifier="showEmojiDetail" id="t8e-bH-O3S"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="EmojiHeaderView" id="WE1-vB-B80" customClass="EmojiHeaderView" customModule="EmojiLibrary" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5z-dk-3KD">
+                                            <rect key="frame" x="18" y="14.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="T5z-dk-3KD" firstAttribute="centerY" secondItem="WE1-vB-B80" secondAttribute="centerY" id="DEO-xI-qiD"/>
+                                        <constraint firstItem="T5z-dk-3KD" firstAttribute="leading" secondItem="WE1-vB-B80" secondAttribute="leadingMargin" constant="10" id="t2n-BM-AKm"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="emojiHeaderLabel" destination="T5z-dk-3KD" id="Jpo-ef-sSc"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Exl-bd-ngn">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="12a-by-hw2"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="RKm-KH-5Yl">
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="qUh-UX-Rvy"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem enabled="NO" systemItem="trash" id="VLA-Qn-erl">
+                                <connections>
+                                    <action selector="removeButtonPressed:" destination="BYZ-38-t0r" id="NUW-C7-cUP"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="RKm-KH-5Yl" id="wmQ-p1-3Qb"/>
+                        <outlet property="deleteButton" destination="VLA-Qn-erl" id="GDY-qQ-LGc"/>
+                        <outlet property="emojiCollectionView" destination="tPh-V3-di5" id="eiz-Ak-YPD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028.985507246377" y="78.348214285714278"/>
+        </scene>
+        <!--Emoji Detail Controller-->
+        <scene sceneID="J7L-Io-bVP">
+            <objects>
+                <viewController id="h6V-1T-Ibb" customClass="EmojiDetailController" customModule="EmojiLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6ha-c7-Hpb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😇" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyI-CW-eXm">
+                                <rect key="frame" x="180" y="418" width="54" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7xb-iN-EXh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yyI-CW-eXm" firstAttribute="centerY" secondItem="6ha-c7-Hpb" secondAttribute="centerY" id="MSo-SQ-Wm9"/>
+                            <constraint firstItem="yyI-CW-eXm" firstAttribute="centerX" secondItem="6ha-c7-Hpb" secondAttribute="centerX" id="Y6b-37-YQs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="S2D-IO-LOn"/>
+                    <connections>
+                        <outlet property="emojiLabel" destination="yyI-CW-eXm" id="apb-JQ-RQB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bLP-eH-prP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="78"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mct-BI-ObH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="str-6e-8eH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Ez-Z1-kRj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RAc-vz-moq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a14-kM-AlL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="78.348214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
