@@ -32,6 +32,7 @@
 		B4CF074A2521F803007FFECB /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF07492521F803007FFECB /* DatabaseManager.swift */; };
 		B4CF074D2521F8CE007FFECB /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF074C2521F8CE007FFECB /* AuthManager.swift */; };
 		B4CF07502521F933007FFECB /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF074F2521F933007FFECB /* StorageManager.swift */; };
+		B4F66C9625224DBF00581EE8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F66C9525224DBF00581EE8 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		B4CF07492521F803007FFECB /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		B4CF074C2521F8CE007FFECB /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		B4CF074F2521F933007FFECB /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		B4F66C9525224DBF00581EE8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CF50EC18E5C2329BBD943DD5 /* Pods_Instagram_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -151,6 +153,7 @@
 				B4CF07492521F803007FFECB /* DatabaseManager.swift */,
 				B4CF074C2521F8CE007FFECB /* AuthManager.swift */,
 				B4CF074F2521F933007FFECB /* StorageManager.swift */,
+				B4F66C9525224DBF00581EE8 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				B4CF06E42521E782007FFECB /* HomeViewController.swift in Sources */,
 				B4CF07222521EB06007FFECB /* SearchResultViewController.swift in Sources */,
 				B4CF070C2521E9BA007FFECB /* LoginViewController.swift in Sources */,
+				B4F66C9625224DBF00581EE8 /* Extensions.swift in Sources */,
 				B4CF071F2521EAF1007FFECB /* SearchViewController.swift in Sources */,
 				B4CF07062521E917007FFECB /* ProfileViewController.swift in Sources */,
 				B4CF074D2521F8CE007FFECB /* AuthManager.swift in Sources */,

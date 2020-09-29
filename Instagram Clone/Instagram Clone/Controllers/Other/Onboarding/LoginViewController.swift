@@ -8,14 +8,37 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    struct Constants {
+        static let cornerRadius: CGFloat = 8.0
+    }
 
     private let usernameEmailField: UITextField = {
-        return UITextField()
+        let field = UITextField()
+        
+        field.placeholder = "Username or Email..."
+        field.returnKeyType = .next
+        field.leftViewMode = .always
+        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+        field.autocapitalizationType = .none
+        field.autocorrectionType = .no
+        field.layer.masksToBounds = true
+        field.layer.cornerRadius = Constants.cornerRadius
+        
+        return field
     }()
     
     private let passwordField: UITextField = {
         let field = UITextField()
         field.isSecureTextEntry = true
+        field.placeholder = "Password..."
+        field.returnKeyType = .next
+        field.leftViewMode = .always
+        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+        field.autocapitalizationType = .none
+        field.autocorrectionType = .no
+        field.layer.masksToBounds = true
+        field.layer.cornerRadius = Constants.cornerRadius
         return field
     }()
     
@@ -49,7 +72,8 @@ class LoginViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         //assign frames
-
+        
+        headerView.frame = CGRect(x: 0, y: view.safeAreaInsets.top, width: view.width, height: 200)
     }
     
     private func addSubViews() {
