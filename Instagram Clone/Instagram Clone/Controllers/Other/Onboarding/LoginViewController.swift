@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     struct Constants {
         static let cornerRadius: CGFloat = 8.0
     }
-
+    
     private let usernameEmailField: UITextField = {
         let field = UITextField()
         
@@ -125,15 +125,15 @@ class LoginViewController: UIViewController {
         
         usernameEmailField.frame = CGRect(x: 25, y: headerView.bottom + 40,
                                           width: view.width - 50, height: 52)
-
+        
         passwordField.frame = CGRect(x: 25, y: usernameEmailField.bottom + 10,
-                                          width: view.width - 50, height: 52)
+                                     width: view.width - 50, height: 52)
         
         loginButton.frame = CGRect(x: 25, y: passwordField.bottom + 10,
-                                          width: view.width - 50, height: 52)
+                                   width: view.width - 50, height: 52)
         
         createAccountButton.frame = CGRect(x: 25, y: loginButton.bottom + 10,
-                                          width: view.width - 50, height: 52)
+                                           width: view.width - 50, height: 52)
         
         termsButton.frame = CGRect(x: 10, y: view.height - view.safeAreaInsets.bottom - 100
                                    , width: view.width - 20, height: 50)
@@ -174,6 +174,9 @@ class LoginViewController: UIViewController {
     
     @objc private func didTapLoginButton(){
         
+        var username: String?
+        var email: String?
+        
         // 키보드를 내려준다.
         passwordField.resignFirstResponder()
         usernameEmailField.resignFirstResponder()
@@ -183,7 +186,29 @@ class LoginViewController: UIViewController {
             return
         }
         
+        if usernameEmail.contains("@"), usernameEmail.contains(".") {
+            // it's email
+            email = usernameEmail
+        } else {
+            // it's username
+            username = usernameEmail
+        }
+        
         // Login Function
+        AuthManager.shared.loginUser(username: username, email: email, password: password) { (success) in
+            DispatchQueue.main.async {
+                if success {
+                    // user logged in!
+                    self.dismiss(animated: true, completion: nil)
+                    print("user logged in!")
+                } else {
+                    // user not logged in!
+                    let alert = UIAlertController(title: "Log in error", message: "We were unable to log you in.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
         
     }
     @objc private func didTapTermsButton(){
@@ -203,7 +228,10 @@ class LoginViewController: UIViewController {
     @objc private func didTapCreateAccountButton(){
         //Register View Controller로 보낸다.
         let vc = RegistrationViewController()
-        present(vc, animated: true, completion: nil)
+        
+        vc.title = "Create Account"
+        
+        present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
     }
 }
 
