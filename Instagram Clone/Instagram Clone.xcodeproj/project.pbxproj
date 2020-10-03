@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		98C685C8E708B5773ED4B391 /* Pods_Instagram_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF50EC18E5C2329BBD943DD5 /* Pods_Instagram_Clone.framework */; };
+		B4873C792528A5B4005AF0B7 /* IGFeedPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4873C782528A5B4005AF0B7 /* IGFeedPostTableViewCell.swift */; };
+		B4873C7E2528AA11005AF0B7 /* IGFeedPostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4873C7D2528AA11005AF0B7 /* IGFeedPostHeaderTableViewCell.swift */; };
+		B4873C812528AA31005AF0B7 /* IGFeedPostActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4873C802528AA31005AF0B7 /* IGFeedPostActionsTableViewCell.swift */; };
+		B4873C842528AA50005AF0B7 /* IGFeedPostGeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4873C832528AA50005AF0B7 /* IGFeedPostGeneralTableViewCell.swift */; };
 		B4CF06E02521E782007FFECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF06DF2521E782007FFECB /* AppDelegate.swift */; };
 		B4CF06E22521E782007FFECB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF06E12521E782007FFECB /* SceneDelegate.swift */; };
 		B4CF06E42521E782007FFECB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF06E32521E782007FFECB /* HomeViewController.swift */; };
@@ -38,6 +42,10 @@
 /* Begin PBXFileReference section */
 		755C72E68D1B85FB49A138B5 /* Pods-Instagram Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram Clone.debug.xcconfig"; path = "Target Support Files/Pods-Instagram Clone/Pods-Instagram Clone.debug.xcconfig"; sourceTree = "<group>"; };
 		8D93017CBC93CB652622C11F /* Pods-Instagram Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram Clone.release.xcconfig"; path = "Target Support Files/Pods-Instagram Clone/Pods-Instagram Clone.release.xcconfig"; sourceTree = "<group>"; };
+		B4873C782528A5B4005AF0B7 /* IGFeedPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostTableViewCell.swift; sourceTree = "<group>"; };
+		B4873C7D2528AA11005AF0B7 /* IGFeedPostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		B4873C802528AA31005AF0B7 /* IGFeedPostActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostActionsTableViewCell.swift; sourceTree = "<group>"; };
+		B4873C832528AA50005AF0B7 /* IGFeedPostGeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostGeneralTableViewCell.swift; sourceTree = "<group>"; };
 		B4CF06DC2521E782007FFECB /* Instagram Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instagram Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4CF06DF2521E782007FFECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4CF06E12521E782007FFECB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +97,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B4873C772528A581005AF0B7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B4873C7B2528A9DC005AF0B7 /* Home Feed */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B4873C7B2528A9DC005AF0B7 /* Home Feed */ = {
+			isa = PBXGroup;
+			children = (
+				B4873C782528A5B4005AF0B7 /* IGFeedPostTableViewCell.swift */,
+				B4873C7D2528AA11005AF0B7 /* IGFeedPostHeaderTableViewCell.swift */,
+				B4873C802528AA31005AF0B7 /* IGFeedPostActionsTableViewCell.swift */,
+				B4873C832528AA50005AF0B7 /* IGFeedPostGeneralTableViewCell.swift */,
+			);
+			path = "Home Feed";
+			sourceTree = "<group>";
+		};
 		B4CF06D32521E782007FFECB = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +158,7 @@
 		B4CF06F52521E7EE007FFECB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B4873C772528A581005AF0B7 /* Cells */,
 				B4CF06E82521E783007FFECB /* Assets.xcassets */,
 				B4CF06F82521E832007FFECB /* Storyboards */,
 			);
@@ -341,19 +369,23 @@
 				B4CF07002521E901007FFECB /* CameraViewController.swift in Sources */,
 				B4CF07032521E90C007FFECB /* NotificationViewController.swift in Sources */,
 				B4CF07102521E9C8007FFECB /* RegistrationViewController.swift in Sources */,
+				B4873C7E2528AA11005AF0B7 /* IGFeedPostHeaderTableViewCell.swift in Sources */,
 				B4CF07252521EB3B007FFECB /* PostEditorViewController.swift in Sources */,
 				B4CF07502521F933007FFECB /* StorageManager.swift in Sources */,
 				B4CF07132521E9F6007FFECB /* PostViewController.swift in Sources */,
 				B4CF074A2521F803007FFECB /* DatabaseManager.swift in Sources */,
 				B4CF06E42521E782007FFECB /* HomeViewController.swift in Sources */,
+				B4873C792528A5B4005AF0B7 /* IGFeedPostTableViewCell.swift in Sources */,
 				B4CF07222521EB06007FFECB /* SearchResultViewController.swift in Sources */,
 				B4CF070C2521E9BA007FFECB /* LoginViewController.swift in Sources */,
 				B4F66C9625224DBF00581EE8 /* Extensions.swift in Sources */,
+				B4873C842528AA50005AF0B7 /* IGFeedPostGeneralTableViewCell.swift in Sources */,
 				B4CF071F2521EAF1007FFECB /* SearchViewController.swift in Sources */,
 				B4CF07062521E917007FFECB /* ProfileViewController.swift in Sources */,
 				B4CF074D2521F8CE007FFECB /* AuthManager.swift in Sources */,
 				B4CF06E02521E782007FFECB /* AppDelegate.swift in Sources */,
 				B4CF06E22521E782007FFECB /* SceneDelegate.swift in Sources */,
+				B4873C812528AA31005AF0B7 /* IGFeedPostActionsTableViewCell.swift in Sources */,
 				B4CF071C2521EACF007FFECB /* ListViewController.swift in Sources */,
 				B4CF07192521EAAE007FFECB /* SettingsViewController.swift in Sources */,
 			);

@@ -14,12 +14,12 @@ struct SettingCellModel {
 
 ///View controller to show user settings
 class SettingsViewController: UIViewController {
-
+    
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-
+        
         return tableView
     }()
     
@@ -36,7 +36,7 @@ class SettingsViewController: UIViewController {
         
         
     }
-
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
@@ -44,12 +44,23 @@ class SettingsViewController: UIViewController {
     }
     
     private func configureModels() {
-        let section = [
+        data.append([
+            SettingCellModel(title:  "Edit Profile", handler: { [weak self] in
+                self?.didTapLogOut()
+            })
+        ])
+        
+        data.append([
+            SettingCellModel(title:  "Terms of Service", handler: { [weak self] in
+                self?.didTapLogOut()
+            })
+        ])
+        
+        data.append([
             SettingCellModel(title:  "Log Out", handler: { [weak self] in
                 self?.didTapLogOut()
             })
-        ]
-        data.append(section)
+        ])
     }
     private func didTapLogOut() {
         

@@ -45,6 +45,4 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return UICollectionViewCell()
     }
-    
-    
 }
