@@ -5,6 +5,7 @@
 //  Created by 김호준 on 2020/09/28.
 //
 
+import SafariServices
 import UIKit
 
 struct SettingCellModel {
@@ -46,13 +47,25 @@ class SettingsViewController: UIViewController {
     private func configureModels() {
         data.append([
             SettingCellModel(title:  "Edit Profile", handler: { [weak self] in
-                self?.didTapLogOut()
+                self?.didTapEditProfile()
+            }),
+            SettingCellModel(title:  "Invite Friends", handler: { [weak self] in
+                self?.didTapInviteFriends()
+            }),
+            SettingCellModel(title:  "Save Original Posts", handler: { [weak self] in
+                self?.didTapSaveOriginalPosts()
             })
         ])
         
         data.append([
             SettingCellModel(title:  "Terms of Service", handler: { [weak self] in
-                self?.didTapLogOut()
+                self?.openURL(type: .terms)
+            }),
+            SettingCellModel(title: "Privacy Policy", handler: { [weak self] in
+                self?.openURL(type: .privacy)
+            }),
+            SettingCellModel(title: "Help / Feedback", handler: { [weak self] in
+                self?.openURL(type: .help)
             })
         ])
         
@@ -62,6 +75,46 @@ class SettingsViewController: UIViewController {
             })
         ])
     }
+    
+    enum SettingURLType {
+        case terms, privacy, help
+    }
+    
+    private func openURL(type: SettingURLType) {
+        let urlString: String
+        
+        switch type {
+        case .terms:
+            urlString = "https://help.instagram.com/581066165581870?ref=dp"
+        case .privacy:
+            urlString = "https://help.instagram.com/519522125107875"
+        case .help:
+            urlString = "https://help.instagram.com/"
+        }
+        
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true, completion: nil)
+    }
+    
+    private func didTapEditProfile() {
+        let vc = EditProfileViewController()
+        vc.title = "Edit Profile"
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true, completion: nil)
+    }
+    
+    private func didTapInviteFriends() {
+        // Show Share sheet to invite friends
+    }
+    
+    private func didTapSaveOriginalPosts() {
+        
+    }
+    
     private func didTapLogOut() {
         
         let actionSheet = UIAlertController(title: "Log Out",
@@ -113,6 +166,7 @@ extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = data[indexPath.section][indexPath.row].title
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
 }
