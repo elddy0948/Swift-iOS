@@ -74,6 +74,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.reuseIdentifier, for: indexPath) as? PhotoCollectionViewCell else {
             fatalError("Can't Create PhotoCollectionViewCell!!")
         }
+        cell.configure(debug: "test")
         
         return cell
     }

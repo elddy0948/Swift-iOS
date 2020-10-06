@@ -5,6 +5,7 @@
 //  Created by 김호준 on 2020/10/05.
 //
 
+import SDWebImage
 import UIKit
 
 class PhotoCollectionViewCell: UICollectionViewCell {
@@ -27,6 +28,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
+        contentView.backgroundColor = .secondarySystemBackground
         contentView.addSubview(photoImageView)
         contentView.clipsToBounds = true
         accessibilityLabel = "User Post Image"
@@ -40,10 +42,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     //MARK: -public
     public func configure(with model: UserPost) {
         let thumbnailURL = model.thumbnailImage
-        let task = URLSession.shared.dataTask(with: thumbnailURL) { (data, _, _) in
-            self.photoImageView.image = UIImage(data: data!)
-        }
-        
+        photoImageView.sd_setImage(with: thumbnailURL, completed: nil)
     }
     public func configure(debug imageName: String) {
         photoImageView.image = UIImage(named: imageName)
