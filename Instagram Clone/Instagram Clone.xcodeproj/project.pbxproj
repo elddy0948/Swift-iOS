@@ -12,6 +12,7 @@
 		B4873C7E2528AA11005AF0B7 /* IGFeedPostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4873C7D2528AA11005AF0B7 /* IGFeedPostHeaderTableViewCell.swift */; };
 		B4873C812528AA31005AF0B7 /* IGFeedPostActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4873C802528AA31005AF0B7 /* IGFeedPostActionsTableViewCell.swift */; };
 		B4873C842528AA50005AF0B7 /* IGFeedPostGeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4873C832528AA50005AF0B7 /* IGFeedPostGeneralTableViewCell.swift */; };
+		B4CCD334252CD62700C18E43 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CCD333252CD62700C18E43 /* Models.swift */; };
 		B4CF06E02521E782007FFECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF06DF2521E782007FFECB /* AppDelegate.swift */; };
 		B4CF06E22521E782007FFECB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF06E12521E782007FFECB /* SceneDelegate.swift */; };
 		B4CF06E42521E782007FFECB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CF06E32521E782007FFECB /* HomeViewController.swift */; };
@@ -50,6 +51,7 @@
 		B4873C7D2528AA11005AF0B7 /* IGFeedPostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		B4873C802528AA31005AF0B7 /* IGFeedPostActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostActionsTableViewCell.swift; sourceTree = "<group>"; };
 		B4873C832528AA50005AF0B7 /* IGFeedPostGeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedPostGeneralTableViewCell.swift; sourceTree = "<group>"; };
+		B4CCD333252CD62700C18E43 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		B4CF06DC2521E782007FFECB /* Instagram Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instagram Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4CF06DF2521E782007FFECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4CF06E12521E782007FFECB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		B4CF06F62521E7F6007FFECB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B4CCD333252CD62700C18E43 /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				B4CF07102521E9C8007FFECB /* RegistrationViewController.swift in Sources */,
 				B4873C7E2528AA11005AF0B7 /* IGFeedPostHeaderTableViewCell.swift in Sources */,
 				B4CF07252521EB3B007FFECB /* PostEditorViewController.swift in Sources */,
+				B4CCD334252CD62700C18E43 /* Models.swift in Sources */,
 				B4CF07502521F933007FFECB /* StorageManager.swift in Sources */,
 				B4E4DD73252B0616003B007C /* FormTableViewCell.swift in Sources */,
 				B4E4DD7D252B0EFB003B007C /* ProfileTabsCollectionReusableView.swift in Sources */,
