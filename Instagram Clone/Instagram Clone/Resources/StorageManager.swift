@@ -6,6 +6,7 @@
 //
 
 import FirebaseStorage
+import Foundation
 
 public class StorageManager {
     static let shared = StorageManager()
@@ -38,6 +39,32 @@ public enum UserPostType {
     case video
 }
 
+/// Represent a user Post
 public struct UserPost {
+    let identifier: String
     let postType: UserPostType
+    let thumbnailImage: URL
+    let postURL: URL    //either Video url or resolution photo
+    let caption: String?
+    let likeCount: [PostLikes]
+    let comment: [PostComment]
+    let createdDate: Date
+}
+
+struct PostLikes {
+    let userName: String
+    let postIdentifier: String
+}
+
+struct CommentLike {
+    let userName: String
+    let commentIdentifier: String
+}
+
+struct PostComment {
+    let identifier: String
+    let username: String
+    let text: String
+    let createDate: Date
+    let likes: [CommentLike]
 }
