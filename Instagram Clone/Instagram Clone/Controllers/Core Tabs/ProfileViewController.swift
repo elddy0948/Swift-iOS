@@ -67,8 +67,18 @@ class ProfileViewController: UIViewController {
 }
 
 extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        //첫번째 Section에는 아무것도 안나오게 한다.
+        //두번째 Section부터 자신의 피드에 있는 사진들을 보여준다.
+        if section == 0 {
+            return 0
+        }
+        return 10
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.reuseIdentifier, for: indexPath) as? PhotoCollectionViewCell else {
@@ -78,7 +88,40 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard kind == UICollectionView.elementKindSectionHeader else {
+            //Footer
+            return UICollectionReusableView()
+        }
+        
+        if indexPath.section == 1 {
+            // tabs header
+            guard let tabHeader = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: kind, withReuseIdentifier: ProfileTabsCollectionReusableView.reuseIdentifier,
+                    for: indexPath) as? ProfileTabsCollectionReusableView else {fatalError("Can't Make Tabs Header")}
+            return tabHeader
+        }
+        
+        guard let profileHeader = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: ProfileHeaderInfoCollectionReusableView.reuseIdentifier,
+                for: indexPath) as? ProfileHeaderInfoCollectionReusableView else {fatalError("Can't make Profile Header")}
+        
+        return profileHeader
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        //Profile사진 있는 Section의 Size
+        if section == 0 {
+            return CGSize(width: collectionView.width, height: collectionView.height / 3)
+        }
+        
+        //바로 밑에 Tab Section
+        return CGSize(width: collectionView.width, height: 65)
     }
 }
