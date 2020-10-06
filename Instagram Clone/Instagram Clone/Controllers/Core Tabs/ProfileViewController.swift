@@ -11,6 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     private var collectionView: UICollectionView?
+    private var userPosts = [UserPost]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,6 @@ class ProfileViewController: UIViewController {
         layout.sectionInset = UIEdgeInsets(top: 0, left: 1, bottom: 0, right: 1)
         layout.itemSize = CGSize(width: size, height: size)
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView?.backgroundColor = .red
         
         //Cell
         collectionView?.register(PhotoCollectionViewCell.self,
@@ -81,9 +81,13 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         return 10
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        //UserPost에서 데이터를 가져옴.
+//        let model = userPosts[indexPath.row]
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.reuseIdentifier, for: indexPath) as? PhotoCollectionViewCell else {
             fatalError("Can't Create PhotoCollectionViewCell!!")
         }
+//        cell.configure(with: model)
         cell.configure(debug: "test")
         
         return cell
@@ -91,7 +95,16 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        // get the model and open post controller
+        // 프로필 상에서 Post를 눌렀을 때 PostViewController로 이동.
+//        let model = userPosts[indexPath.row]
+        let vc = PostViewController(model: nil)
+        vc.title = "title"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard kind == UICollectionView.elementKindSectionHeader else {
