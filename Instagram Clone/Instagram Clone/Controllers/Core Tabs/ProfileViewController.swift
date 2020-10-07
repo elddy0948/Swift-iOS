@@ -124,7 +124,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
                 ofKind: kind,
                 withReuseIdentifier: ProfileHeaderInfoCollectionReusableView.reuseIdentifier,
                 for: indexPath) as? ProfileHeaderInfoCollectionReusableView else {fatalError("Can't make Profile Header")}
-        
+        profileHeader.delegate = self
         return profileHeader
     }
     
@@ -137,4 +137,34 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         //바로 밑에 Tab Section
         return CGSize(width: collectionView.width, height: 65)
     }
+}
+
+//MARK: - ProfileHeaderInfoCollectionReusableViewDelegate
+extension ProfileViewController: ProfileHeaderInfoCollectionReusableViewDelegate {
+    func profileHeaderDidTapPostButton(_ header: ProfileHeaderInfoCollectionReusableView) {
+        // scroll to the posts
+        collectionView?.scrollToItem(at: IndexPath(row: 0, section: 1), at: .top, animated: true)
+    }
+    
+    func profileHeaderDidTapFollowerButton(_ header: ProfileHeaderInfoCollectionReusableView) {
+        let vc = ListViewController()
+        vc.title = "Followers"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func profileHeaderDidTapFollowingButton(_ header: ProfileHeaderInfoCollectionReusableView) {
+        let vc = ListViewController()
+        vc.title = "Following"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func profileHeaderDidTapEditProfileButton(_ header: ProfileHeaderInfoCollectionReusableView) {
+        let vc = EditProfileViewController()
+        vc.title = "Edit Profile"
+        present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
+    }
+    
+    
 }
