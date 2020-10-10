@@ -10,6 +10,13 @@ import UIKit
 class ProfileTabsCollectionReusableView: UICollectionReusableView {
     static let reuseIdentifier = "ProfileTabsCollectionReusableView"
     
+    private let gridButton: UIButton = {
+        let button = UIButton()
+        button.clipsToBounds = true
+        button.backgroundColor = .systemBlue
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .systemBackground
