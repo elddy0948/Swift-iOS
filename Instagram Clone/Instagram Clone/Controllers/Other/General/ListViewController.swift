@@ -61,6 +61,7 @@ extension ListViewController: UITableViewDataSource {
             fatalError("Can't make UserFollowTableViewCell")
         }
         cell.configure(with: data[indexPath.row])
+        cell.delegate = self
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -73,5 +74,17 @@ extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
-    
+}
+
+extension ListViewController: UserFollowTableViewCellDelegate {
+    func didTapFollowUnfollowButton(model: UserRelationship) {
+        switch model.type {
+        case .following:
+            //perform firebase update to unfollow
+             break
+        case .notFollowing:
+            //perform firebase update to follow
+            break
+        }
+    }
 }
