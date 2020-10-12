@@ -9,7 +9,7 @@ import UIKit
 
 enum UserNotificationType {
     case like(post: UserPost)
-    case follow
+    case follow(state: FollowState)
 }
 
 struct UserNotification {
@@ -61,7 +61,7 @@ final class NotificationViewController: UIViewController {
     private func fetchNotification() {
         for x in 0...100 {
             let post = UserPost(identifier: "", postType: .photo, thumbnailImage: URL(string: "https://google.com")!, postURL: URL(string: "https://google.com")!, caption: nil, likeCount: [], comment: [], createdDate: Date(), taggedUsers: [])
-            let model = UserNotification(type: x % 2 == 0 ? .like(post: post) : .follow, text: "Hello World", user: User(username: "holuck", bio: "", name: (first: "", last: ""), birth: Date(), profilePhoto: URL(string: "https://www.google.com")!, gender: .male, counts: UserCount(follower: 1, following: 1, posts: 1), joinDate: Date()))
+            let model = UserNotification(type: x % 2 == 0 ? .like(post: post) : .follow(state: .notFollowing), text: "Hello World", user: User(username: "holuck", bio: "", name: (first: "", last: ""), birth: Date(), profilePhoto: URL(string: "https://www.google.com")!, gender: .male, counts: UserCount(follower: 1, following: 1, posts: 1), joinDate: Date()))
             models.append(model)
         }
     }
@@ -87,13 +87,33 @@ extension NotificationViewController: UITableViewDelegate, UITableViewDataSource
             //like cell
             guard let cell = tableView.dequeueReusableCell(withIdentifier: NotificationLikeEventTableViewCell.reuseIdentifier, for: indexPath) as? NotificationLikeEventTableViewCell else {fatalError("Can't make NotificationLikeEventTableViewCell")}
             cell.configure(with: model)
+            cell.delegate = self
             return cell
         case .follow:
             //follow cell
             guard let cell = tableView.dequeueReusableCell(withIdentifier: NotificationFollowEventTableViewCell.reuseIdentifier, for: indexPath) as? NotificationFollowEventTableViewCell else {fatalError("Can't make NotificationFollowEventTableViewCell")}
 //            cell.configure(with: model)
+            cell.delegate = self
             return cell
         }
-        
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 52
+    }
+}
+
+
+//MARK: - NotificationLikeEventTableViewCellDelegate
+extension NotificationViewController: NotificationLikeEventTableViewCellDelegate {
+    func didTapRelatedPostButtonButton(model: UserNotification) {
+        print("Tapped post")
+        //Open the post
+    }
+}
+
+extension NotificationViewController: NotificationFollowEventTableViewCellDelegate {
+    func didTapFollowUnFollowButton(model: UserNotification) {
+        print("Tapped Follow")
+        //perform database update
     }
 }
