@@ -59,8 +59,9 @@ final class NotificationViewController: UIViewController {
     }
     
     private func fetchNotification() {
+        let user = User(username: "holuck", bio: "", name: (first: "", last: ""), birth: Date(), profilePhoto: URL(string: "https://www.google.com")!, gender: .male, counts: UserCount(follower: 1, following: 1, posts: 1), joinDate: Date())
         for x in 0...100 {
-            let post = UserPost(identifier: "", postType: .photo, thumbnailImage: URL(string: "https://google.com")!, postURL: URL(string: "https://google.com")!, caption: nil, likeCount: [], comment: [], createdDate: Date(), taggedUsers: [])
+            let post = UserPost(identifier: "", postType: .photo, thumbnailImage: URL(string: "https://google.com")!, postURL: URL(string: "https://google.com")!, caption: nil, likeCount: [], comment: [], createdDate: Date(), taggedUsers: [], owner: user)
             let model = UserNotification(type: x % 2 == 0 ? .like(post: post) : .follow(state: .notFollowing), text: "Hello World", user: User(username: "holuck", bio: "", name: (first: "", last: ""), birth: Date(), profilePhoto: URL(string: "https://www.google.com")!, gender: .male, counts: UserCount(follower: 1, following: 1, posts: 1), joinDate: Date()))
             models.append(model)
         }
@@ -106,8 +107,17 @@ extension NotificationViewController: UITableViewDelegate, UITableViewDataSource
 //MARK: - NotificationLikeEventTableViewCellDelegate
 extension NotificationViewController: NotificationLikeEventTableViewCellDelegate {
     func didTapRelatedPostButtonButton(model: UserNotification) {
-        print("Tapped post")
-        //Open the post
+        switch model.type {
+        case .like(let post):
+            //Open the post
+            let vc = PostViewController(model: post)
+            vc.title = post.postType.rawValue
+            vc.navigationItem.largeTitleDisplayMode = .never
+            navigationController?.pushViewController(vc, animated: true)
+        case.follow(_):
+            fatalError("Dev Issue: Should never get called")
+        }
+        
     }
 }
 
