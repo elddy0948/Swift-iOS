@@ -15,7 +15,8 @@ struct User {
     let username: String
     let bio: String
     let name: (first: String, last: String)
-    let birth: Int
+    let birth: Date
+    let profilePhoto: URL
     let gender: Gender
     let counts: UserCount
     let joinDate: Date
