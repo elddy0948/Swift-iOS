@@ -146,8 +146,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             //header
             let headerModel = model.header
             switch headerModel.renderType {
-            case .header(_):
+            case .header(provider: let user):
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostHeaderTableViewCell.reuseIdentifier, for: indexPath) as? IGFeedPostHeaderTableViewCell else { fatalError("Can't make IGFeedPostHeaderTableViewCell")}
+                cell.configure(with: user)
+                cell.delegate = self
                 return cell
             case .primaryContent(provider: _), .actions(provider: _), .comments(comments: _): return UITableViewCell()
             }
@@ -156,8 +158,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             //post
             let postModel = model.post
             switch postModel.renderType {
-            case .primaryContent(_):
+            case .primaryContent(provider: let post):
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostTableViewCell.reuseIdentifier, for: indexPath) as? IGFeedPostTableViewCell else { fatalError("Can't make IGFeedPostTableViewCell")}
+                cell.configure(with: post)
                 return cell
             case .actions(provider: _), .comments(comments: _), .header(provider: _): return UITableViewCell()
             }
@@ -168,6 +171,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             switch actionModel.renderType {
             case .actions(provider: _):
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostActionsTableViewCell.reuseIdentifier, for: indexPath) as? IGFeedPostActionsTableViewCell else { fatalError("Can't make IGFeedPostActionsTableViewCell")}
+                cell.delegate = self
                 return cell
             case .comments(comments: _), .header(provider: _), .primaryContent(provider: _): return UITableViewCell()
             }
@@ -218,5 +222,33 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         let subSection = section % 4
         return subSection == 3 ? 70 : 0
+    }
+}
+
+extension HomeViewController: IGFeedPostHeaderTableViewCellDelegate {
+    func didTapMoreButton() {
+        let actionSheet = UIAlertController(title: "Post Options", message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Report Post", style: .destructive, handler: { (_) in
+            self.reportPost()
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(actionSheet, animated: true, completion: nil)
+    }
+    func reportPost() {
+        
+    }
+}
+
+extension HomeViewController: IGFeedPostActionsTableViewCellDelegate {
+    func didTapLikeButton() {
+        print("Like")
+    }
+    
+    func didTapCommentButton() {
+        print("Comment")
+    }
+    
+    func didTapSendButton() {
+        print("Send")
     }
 }
