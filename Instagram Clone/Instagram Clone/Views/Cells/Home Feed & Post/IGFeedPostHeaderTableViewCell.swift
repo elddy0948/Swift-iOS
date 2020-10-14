@@ -14,6 +14,8 @@ class IGFeedPostHeaderTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = .systemBlue
+        contentView.layer.masksToBounds = true
+        contentView.layer.cornerRadius = 5
     }
 
     override func layoutSubviews() {
