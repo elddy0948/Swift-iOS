@@ -21,21 +21,27 @@ class IGFeedPostActionsTableViewCell: UITableViewCell {
     
     private let likeButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "heart"), for: .normal)
+        let config = UIImage.SymbolConfiguration(pointSize: 30, weight: .thin)
+        let image = UIImage(systemName: "heart", withConfiguration: config)
+        button.setImage(image, for: .normal)
         button.tintColor = .label
         return button
     }()
     
     private let sendButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "paperplane"), for: .normal)
+        let config  = UIImage.SymbolConfiguration(pointSize: 30, weight: .thin)
+        let image = UIImage(systemName: "paperplane", withConfiguration: config)
+        button.setImage(image, for: .normal)
         button.tintColor = .label
         return button
     }()
     
     private let commentButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "message"), for: .normal)
+        let config = UIImage.SymbolConfiguration(pointSize: 30, weight: .thin)
+        let image = UIImage(systemName: "message", withConfiguration: config)
+        button.setImage(image, for: .normal)
         button.tintColor = .label
         return button
     }()
@@ -65,9 +71,9 @@ class IGFeedPostActionsTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        likeButton.setImage(nil, for: .normal)
-        sendButton.setImage(nil, for: .normal)
-        commentButton.setImage(nil, for: .normal)
+//        likeButton.setImage(nil, for: .normal)
+//        sendButton.setImage(nil, for: .normal)
+//        commentButton.setImage(nil, for: .normal)
     }
     
     //MARK: - Actions

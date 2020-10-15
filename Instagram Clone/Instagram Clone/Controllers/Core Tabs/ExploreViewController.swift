@@ -11,8 +11,8 @@ class ExploreViewController: UIViewController {
 
     private let searchBar: UISearchBar = {
         let searchBar = UISearchBar()
+        searchBar.placeholder = "Search"
         searchBar.backgroundColor = .secondarySystemBackground
-        
         return searchBar
     }()
     
@@ -34,6 +34,7 @@ class ExploreViewController: UIViewController {
             return
         }
         view.addSubview(collectionView)
+        searchBar.delegate = self
     }
 }
 
@@ -44,5 +45,32 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return UICollectionViewCell()
+    }
+}
+
+extension ExploreViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        guard let text = searchBar.text,
+              !text.isEmpty else {
+            return
+        }
+        query(text)
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(didCancelSearch))
+
+    }
+    
+    @objc private func didCancelSearch() {
+        searchBar.resignFirstResponder()
+        navigationItem.rightBarButtonItem = nil
+        
+    }
+    
+    private func query(_ text: String) {
+        //perform the search in the back end
+        
     }
 }
