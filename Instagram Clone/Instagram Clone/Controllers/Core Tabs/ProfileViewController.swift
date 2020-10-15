@@ -98,8 +98,10 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         // get the model and open post controller
         // 프로필 상에서 Post를 눌렀을 때 PostViewController로 이동.
 //        let model = userPosts[indexPath.row]
-        let vc = PostViewController(model: nil)
-        vc.title = "title"
+        let user = User(username: "holuck", bio: "", name: (first: "", last: ""), birth: Date(), profilePhoto: URL(string: "https://www.google.com")!, gender: .male, counts: UserCount(follower: 1, following: 1, posts: 1), joinDate: Date())
+        let post = UserPost(identifier: "", postType: .photo, thumbnailImage: URL(string: "https://google.com")!, postURL: URL(string: "https://google.com")!, caption: nil, likeCount: [], comment: [], createdDate: Date(), taggedUsers: [], owner: user)
+        let vc = PostViewController(model: post)
+        vc.title = post.postType.rawValue
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
         
