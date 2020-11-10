@@ -20,7 +20,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         if UserDefaults.standard.string(forKey: "texty") == nil {
             Label.text = "Nil"
-        } 
+        }
     }
     @IBAction func storeTextField(_ sender: UIButton) {
         UserDefaults.standard.set(textFiedl.text, forKey: "text")

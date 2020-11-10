@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebViewStoryBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="SearchBarView" customModule="WebViewStoryBoard" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XR5-Lj-eQC" customClass="ToolBar" customModule="WebViewStoryBoard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem image="chevron.left" catalog="system" width="49.5" id="nT8-dC-XsI">
+                                        <connections>
+                                            <action selector="didTapBackButton:" destination="XR5-Lj-eQC" id="tG6-fq-NLC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="chevron.right" catalog="system" width="57.5" id="Tl6-1W-eGo">
+                                        <connections>
+                                            <action selector="didTapForwardButton:" destination="XR5-Lj-eQC" id="cT2-k9-KsD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="arrow.counterclockwise" catalog="system" width="55" id="P0G-X2-Otn">
+                                        <connections>
+                                            <action selector="didTapReloadButton:" destination="XR5-Lj-eQC" id="KkA-Uv-lbt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89d-aI-Lnp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="72"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ffS-ej-KBr" customClass="SearchBar" customModule="WebViewStoryBoard" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="344" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYd-cl-nTF">
+                                        <rect key="frame" x="360" y="8" width="46" height="56"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didTapSearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qv7-uT-WN1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ffS-ej-KBr" firstAttribute="top" secondItem="89d-aI-Lnp" secondAttribute="top" constant="8" id="HYX-oo-8ps"/>
+                                    <constraint firstAttribute="trailing" secondItem="zYd-cl-nTF" secondAttribute="trailing" constant="8" id="Ksq-0F-cNK"/>
+                                    <constraint firstItem="zYd-cl-nTF" firstAttribute="top" secondItem="89d-aI-Lnp" secondAttribute="top" constant="8" id="RL3-By-QDm"/>
+                                    <constraint firstItem="zYd-cl-nTF" firstAttribute="leading" secondItem="ffS-ej-KBr" secondAttribute="trailing" constant="8" id="ehf-uJ-5aD"/>
+                                    <constraint firstItem="ffS-ej-KBr" firstAttribute="leading" secondItem="89d-aI-Lnp" secondAttribute="leading" constant="8" id="iml-Vj-S6u"/>
+                                    <constraint firstAttribute="bottom" secondItem="ffS-ej-KBr" secondAttribute="bottom" constant="8" id="oKY-Yx-TWY"/>
+                                    <constraint firstAttribute="bottom" secondItem="zYd-cl-nTF" secondAttribute="bottom" constant="8" id="sMl-uC-Eog"/>
+                                </constraints>
+                            </view>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVF-vk-Ofc" customClass="WebView" customModule="WebViewStoryBoard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="116" width="414" height="697"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="89d-aI-Lnp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Me-qV-vjD"/>
+                            <constraint firstItem="89d-aI-Lnp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5JD-ZQ-G8D"/>
+                            <constraint firstItem="XR5-Lj-eQC" firstAttribute="top" secondItem="iVF-vk-Ofc" secondAttribute="bottom" id="Csl-HV-Ifj"/>
+                            <constraint firstItem="XR5-Lj-eQC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HGh-cd-6zG"/>
+                            <constraint firstItem="iVF-vk-Ofc" firstAttribute="top" secondItem="89d-aI-Lnp" secondAttribute="bottom" id="Hsl-4m-A7Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iVF-vk-Ofc" secondAttribute="trailing" id="KlT-CX-GVc"/>
+                            <constraint firstItem="XR5-Lj-eQC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PXi-fR-5mP"/>
+                            <constraint firstItem="XR5-Lj-eQC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fXH-tW-3hr"/>
+                            <constraint firstItem="89d-aI-Lnp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mcF-BM-t9G"/>
+                            <constraint firstItem="iVF-vk-Ofc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qdt-b5-Y9B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="ffS-ej-KBr" id="SJJ-g8-C5c"/>
+                        <outlet property="toolBar" destination="XR5-Lj-eQC" id="W8w-lz-Fop"/>
+                        <outlet property="webView" destination="iVF-vk-Ofc" id="JeV-vh-8fw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="108.48214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.counterclockwise" catalog="system" width="115" height="128"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
