@@ -13,6 +13,7 @@
 		B459002825792388005CF37B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B459002725792388005CF37B /* Assets.xcassets */; };
 		B459002B25792388005CF37B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B459002925792388005CF37B /* LaunchScreen.storyboard */; };
 		B459003425792411005CF37B /* PinchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459003325792411005CF37B /* PinchViewController.swift */; };
+		B459003825792B70005CF37B /* RotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459003725792B70005CF37B /* RotationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B459002A25792388005CF37B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B459002C25792388005CF37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B459003325792411005CF37B /* PinchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchViewController.swift; sourceTree = "<group>"; };
+		B459003725792B70005CF37B /* RotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B459002925792388005CF37B /* LaunchScreen.storyboard */,
 				B459002C25792388005CF37B /* Info.plist */,
 				B459003325792411005CF37B /* PinchViewController.swift */,
+				B459003725792B70005CF37B /* RotationViewController.swift */,
 			);
 			path = GestureRecognizerPractice;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				B459003425792411005CF37B /* PinchViewController.swift in Sources */,
 				B459001F25792387005CF37B /* AppDelegate.swift in Sources */,
+				B459003825792B70005CF37B /* RotationViewController.swift in Sources */,
 				B459002125792387005CF37B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

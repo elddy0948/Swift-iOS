@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="689.85507246376812" y="106.47321428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Rotation View Controller-->
         <scene sceneID="wEG-9B-y1K">
             <objects>
-                <viewController id="iEJ-qH-qVn" sceneMemberID="viewController">
+                <viewController id="iEJ-qH-qVn" customClass="RotationViewController" customModule="GestureRecognizerPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="udl-9T-x8Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,6 +58,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="d1U-mm-1J8"/>
+                    <connections>
+                        <outlet property="rotationView" destination="udl-9T-x8Z" id="pHU-VI-1xO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wR-yN-mi0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
