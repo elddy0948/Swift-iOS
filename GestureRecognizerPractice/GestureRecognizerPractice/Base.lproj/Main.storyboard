@@ -78,6 +78,9 @@
                                 <rect key="frame" x="184" y="433" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="uPF-TS-wEv" kind="push" id="ocB-6K-UK1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6rw-ah-K4u"/>
@@ -90,7 +93,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y8n-ei-uQp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2180" y="106"/>
+            <point key="canvasLocation" x="2179.7101449275365" y="105.80357142857143"/>
+        </scene>
+        <!--Pan View Controller-->
+        <scene sceneID="rnj-Rf-f1B">
+            <objects>
+                <viewController id="uPF-TS-wEv" customClass="PanViewController" customModule="GestureRecognizerPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wXl-zj-aUB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyE-8y-jRu">
+                                <rect key="frame" x="186" y="298" width="29" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HIu-8c-Yay"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7IJ-F4-kxU"/>
+                    <connections>
+                        <outlet property="panView" destination="wXl-zj-aUB" id="dZy-9i-khH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0S3-4h-Jcu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2966.666666666667" y="105.80357142857143"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5ht-cB-b31">

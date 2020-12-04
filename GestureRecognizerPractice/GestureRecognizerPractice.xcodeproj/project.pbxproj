@@ -15,6 +15,7 @@
 		B459003425792411005CF37B /* PinchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459003325792411005CF37B /* PinchViewController.swift */; };
 		B459003825792B70005CF37B /* RotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459003725792B70005CF37B /* RotationViewController.swift */; };
 		B495533F257A91CC00951885 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495533E257A91CC00951885 /* SwipeViewController.swift */; };
+		B4955342257AA3C000951885 /* PanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4955341257AA3C000951885 /* PanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B459003325792411005CF37B /* PinchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchViewController.swift; sourceTree = "<group>"; };
 		B459003725792B70005CF37B /* RotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationViewController.swift; sourceTree = "<group>"; };
 		B495533E257A91CC00951885 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		B4955341257AA3C000951885 /* PanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				B459003325792411005CF37B /* PinchViewController.swift */,
 				B459003725792B70005CF37B /* RotationViewController.swift */,
 				B495533E257A91CC00951885 /* SwipeViewController.swift */,
+				B4955341257AA3C000951885 /* PanViewController.swift */,
 			);
 			path = GestureRecognizerPractice;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				B459003425792411005CF37B /* PinchViewController.swift in Sources */,
 				B459001F25792387005CF37B /* AppDelegate.swift in Sources */,
 				B459003825792B70005CF37B /* RotationViewController.swift in Sources */,
+				B4955342257AA3C000951885 /* PanViewController.swift in Sources */,
 				B459002125792387005CF37B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
