@@ -14,6 +14,7 @@
 		B459002B25792388005CF37B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B459002925792388005CF37B /* LaunchScreen.storyboard */; };
 		B459003425792411005CF37B /* PinchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459003325792411005CF37B /* PinchViewController.swift */; };
 		B459003825792B70005CF37B /* RotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B459003725792B70005CF37B /* RotationViewController.swift */; };
+		B495533F257A91CC00951885 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495533E257A91CC00951885 /* SwipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B459002C25792388005CF37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B459003325792411005CF37B /* PinchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchViewController.swift; sourceTree = "<group>"; };
 		B459003725792B70005CF37B /* RotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationViewController.swift; sourceTree = "<group>"; };
+		B495533E257A91CC00951885 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				B459002C25792388005CF37B /* Info.plist */,
 				B459003325792411005CF37B /* PinchViewController.swift */,
 				B459003725792B70005CF37B /* RotationViewController.swift */,
+				B495533E257A91CC00951885 /* SwipeViewController.swift */,
 			);
 			path = GestureRecognizerPractice;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B495533F257A91CC00951885 /* SwipeViewController.swift in Sources */,
 				B459003425792411005CF37B /* PinchViewController.swift in Sources */,
 				B459001F25792387005CF37B /* AppDelegate.swift in Sources */,
 				B459003825792B70005CF37B /* RotationViewController.swift in Sources */,
