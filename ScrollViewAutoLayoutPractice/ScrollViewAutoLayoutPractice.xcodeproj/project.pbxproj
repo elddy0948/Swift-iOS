@@ -13,6 +13,7 @@
 		B401054D2592039A000C8EC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B401054B2592039A000C8EC5 /* Main.storyboard */; };
 		B401054F2592039B000C8EC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B401054E2592039B000C8EC5 /* Assets.xcassets */; };
 		B40105522592039B000C8EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40105502592039B000C8EC5 /* LaunchScreen.storyboard */; };
+		B401055F25920439000C8EC5 /* MyScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B401055E25920439000C8EC5 /* MyScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B401054E2592039B000C8EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B40105512592039B000C8EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B40105532592039B000C8EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B401055E25920439000C8EC5 /* MyScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B401054E2592039B000C8EC5 /* Assets.xcassets */,
 				B40105502592039B000C8EC5 /* LaunchScreen.storyboard */,
 				B40105532592039B000C8EC5 /* Info.plist */,
+				B401055E25920439000C8EC5 /* MyScrollView.swift */,
 			);
 			path = ScrollViewAutoLayoutPractice;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B401054A2592039A000C8EC5 /* ViewController.swift in Sources */,
+				B401055F25920439000C8EC5 /* MyScrollView.swift in Sources */,
 				B40105462592039A000C8EC5 /* AppDelegate.swift in Sources */,
 				B40105482592039A000C8EC5 /* SceneDelegate.swift in Sources */,
 			);
