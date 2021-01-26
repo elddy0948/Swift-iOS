@@ -47,5 +47,4 @@ class CryptoCurrencyAPIPracticeTests: XCTestCase {
             return
         }
     }
-
 }
