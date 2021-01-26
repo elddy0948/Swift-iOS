@@ -59,10 +59,8 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let cryptoCount = cryptoCurrency?.cryptoData?.count {
-            print("hello")
             return cryptoCount
         } else {
-            print("Bye")
             return 0
         }
     }
